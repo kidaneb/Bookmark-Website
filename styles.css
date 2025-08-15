@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+
+/* Configuring custom screensize */
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+}
+/* Configuring custom colors */
+@theme {
+  --color-softBlue: hsl(231, 69%, 60%);
+  --color-softRed: hsl(0, 94%, 66%);
+  --color-grayishBlue: hsl(229, 8%, 60%);
+  --color-veryDarkBlue: hsl(229, 31%, 21%);
+}
+/* Configuring custom fonts */
+
+@theme {
+  --font-sans: "Rubik", sans-serif;
+}
+
+/* background dot image */
+@theme {
+  --image-dotBackgroundImage:url('/images/bg-dots.svg')
+}
+
+/* custom hamburger menu button */
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  transition: all 0.25s;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger .hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger .hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position:fixed;
+  top:7%;
+  left:77%;
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  transition: all 0.5s;
+  background: white;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background: white;
+}
+.open .hamburger-middle {
+  display: none;
+}
+
+/* background for hero section */
+.bg-hero {
+  position:absolute;
+  width: 2000px;
+  height: 300px;
+  left: 30%;
+  top:40%;
+  z-index:-1;
+  @apply bg-softBlue rounded-full;
+}
+
+/* background for the tabs */
+.bg-tabs{
+  position:absolute;
+  width:2000px;
+  height:300px;
+  top:40%;
+  right:65%;
+  z-index:-1;
+  @apply bg-softBlue rounded-full;
+}
+
+/* ficon custom class for the social address hover effects */
+
+.ficon:hover {
+  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg)
+    brightness(101%) contrast(96%);
+}
