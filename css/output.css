@@ -420,10 +420,6 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -444,9 +440,6 @@
   }
   .border-softRed {
     border-color: var(--color-softRed);
-  }
-  .border-white {
-    border-color: var(--color-white);
   }
   .border-b-gray-300 {
     border-bottom-color: var(--color-gray-300);
